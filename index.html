@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <!-- header -->
+    <header class="header">
+      <nav class="header__nav">
+        <h4 class="hng-logo">HNG</h4>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">ROOMS</a></li>
+          <li><a href="#">FACILITIES</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <h1>Contact Us</h1>
+    </header>
+
+    <!-- message/address -->
+
+    <!-- Send Message -->
+    <section id="contact-us">
+      <div class="info-left">
+        <h1 class="light">SEND US A</h1>
+        <h1 class="bold">MESSAGE</h1>
+        <h5>Kindly fill out the form</h5>
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" id="" placeholder="Add Name">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" id="" placeholder="Add Email">
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" id="" placeholder="Phone Number">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" id="" placeholder="Add Message"></textarea>
+          </div>
+          <input type="submit" value="Send" class="button">
+        </form>
+      </div>
+
+      <!-- Address -->
+      <div class="info-right">
+        <h1 class="light">OUR </h1>
+        <h1 class="bold">ADDRESS</h1>
+        <h5>You can find us at:</h5>
+        <b>
+          30b, Owonikoko Street,
+          <span style="white-space: pre-line">Off Richman Junction, Ikeja Lagos- Nigeria.</span>
+        </b>
+        <br><br>
+        <h5 class="text-heading">Phone Number</h5>
+        09087887649
+        <br>
+        07065990587
+        <br><br>
+        <h5 class="text-heading">Email Address</h5>
+        <b>hello@hng.com.ng</b>
+      </div>
+    </section>
+
+    <!-- map section -->
+    <section class="map-container">
+      <div id="map"></div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <h4 class="hng-logo">HNG</h4>
+      <nav class="footer__nav">
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">ROOMS</a></li>
+          <li><a href="#">FACILITIES</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-youtube" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="footer__copyright">
+        <small>&copy; Copyright - HNG Hotels | Designed by DamiflexSolution</small>
+      </div>
+    </footer>
+  </div>
+  <!-- map script -->
+  <script>
+    function initMap() {
+      var location = { lat: 6.595680, lng: 3.337030 };
+      var map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 4,
+        center: location
+      });
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+    }
+
+  </script>
+
+<!-- 
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3k7sqj7OqdV_zDynOShg5TQu55_rI-s&calback=initMap"></script> -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH3k7sqj7OqdV_zDynOShg5TQu55_rI-s&callback=initMap"
+    async defer></script>
+</body>
+
+</html>
